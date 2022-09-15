@@ -1,0 +1,165 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --background-color: #F0EAD2;
+    --header-color: #6C584C;
+    --secondary-background-color: #DDE5B6;
+    --bonus-brown: #A98467;
+    --bonus-green: #ADC178;
+    --text-color: black;
+    --text-select: rgb(61, 61, 61);
+}
+
+::selection {
+    background-color: var(--bonus-green);
+    color: var(--text-select);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-color);
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--secondary-background-color);
+    padding: 50px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+p {
+    display: inline-block;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    text-align: end;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--bonus-green);
+    display: inline-block;
+    margin-right: 10px;
+    
+    transition:width 1s;
+    transition:height 1s;
+}
+
+h1 {
+    font-size: 170%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+li {
+    margin-top: 5px;
+}
+
+.infosection {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.header {
+    background-color: var(--header-color);
+    padding: 20px;
+    color: var(--background-color);
+    position: fixed;
+    width: 98%;
+}
+
+.link {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--background-color);
+}
+
+.card {
+    display: flex;
+    margin: 10px;
+}
+
+.card h2 {
+    position: relative;
+    margin-top: -20px;
+    color: var(--text-color);
+    text-decoration: none;
+
+    top: 2px;
+    left: 15px;
+}
+
+.card a img {
+    margin: 0px 10px;
+}
+
+#first {
+    height: 210px;
+}
+
+#portfolio {
+    flex-direction: column;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    img {
+        height: 150px;
+    }
+
+    #first {
+        height: 170px;
+    }
+}
+  
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    img {
+        height: 150px;
+    }
+
+    #first {
+        height: 170px;
+    }
+    .card {
+        flex-direction: column;
+    }
+
+    #portfolio {
+        justify-content: center;
+    }
+}
+  
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    img {
+        margin: 0;
+        height: auto;
+        width: 100%;
+    }
+}
+  
